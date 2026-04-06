@@ -32,19 +32,21 @@
 
 		<nav class="navbar">
 			<div class="container navbar-inner">
-				<a href="#" class="brand" aria-label="Medino">
-					<span class="brand-mark" aria-hidden="true"></span>
-					<span class="brand-text">Medino</span>
+				<a href="index.html" class="brand" aria-label="Medino">
+					<img src="./images/logo.png" class="brand-logo" alt="Clinic logo">
+					<span class="brand-lines">
+						<span class="brand-text">Dr. Gulshan Tolani&#39;s</span>
+						<span class="brand-sub">Clinic</span>
+					</span>
 				</a>
 				<ul class="menu">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">DEPARTMENTS</a></li>
-					<li><a href="#">DOCTORS</a></li>
-					<li><a href="#">PAGES <i class="fa-solid fa-angle-down"></i></a></li>
-					<li><a href="#">BLOG <i class="fa-solid fa-angle-down"></i></a></li>
-					<li><a href="#">CONTACT</a></li>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="about-doctor.html">ABOUT DOCTOR</a></li>
+					<li><a href="clinics.html">CLINICS</a></li>
+					<li><a href="appointment.html">APPOINTMENT</a></li>
+					<li><a href="contact.html">CONTACT</a></li>
 				</ul>
-				<a href="#" class="hero-btn">
+				<a href="appointment.html" class="hero-btn">
                     Book Appointment
                 </a>
 			</div>
@@ -61,7 +63,7 @@
 					Earth greater grass for good. Place for divide evening yielding
 					them that. Creeping beginning over gathered brought.
 				</p>
-				<a href="#" class="hero-btn">Book Your Slot Now</a>
+				<a href="appointment.html" class="hero-btn">Book Your Slot Now</a>
 			</div>
 		</section>
 
@@ -94,7 +96,7 @@
 					<p>
 						Dr. Gulshan Bheem Tolani (Vijan Hospital) is conveniently located in College Road, Nashik, near Near Big Bazar, making it easily accessible by public transportation for patients from nearby cities and towns. The area is well-known for its excellent connectivity, ensuring a smooth commute for visitors from various locations. Public transport options like buses and trains are available at frequent intervals. Additionally, ample parking space is provided for those traveling by private vehicles, ensuring hassle-free access for all patients.
 					</p>
-					<a href="#" class="welcome-btn">LEARN MORE</a>
+					<a href="about-doctor.html" class="welcome-btn">LEARN MORE</a>
 				</div>
 			</div>
 		</section>
@@ -223,27 +225,38 @@
 			<div class="clinic-footer-pulse" aria-hidden="true"></div>
 			<div class="container clinic-footer-top">
 				<div class="clinic-footer-col">
-					<h3>TOP PRODUCTS</h3>
+					<h3>QUICK LINKS</h3>
 					<ul>
-						<li><a href="#">Managed Website</a></li>
-						<li><a href="#">Managed Reputation</a></li>
-						<li><a href="#">Power Tools</a></li>
-						<li><a href="#">Marketing Service</a></li>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about-doctor.html">About Doctor</a></li>
+						<li><a href="clinics.html">Clinics</a></li>
+						<li><a href="appointment.html">Appointment</a></li>
+						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
 
 				<div class="clinic-footer-col clinic-newsletter-col">
 					<h3>NEWSLETTER</h3>
-					<p>You can trust us. We only send health tips, updates, and helpful offers.</p>
+					<p>You can trust us. We only send useful health tips, updates, and appointment reminders.</p>
 					<form class="clinic-newsletter-form" action="#" method="post">
 						<input type="email" placeholder="Your email here" aria-label="Email for newsletter" required>
 						<button type="submit">SUBSCRIBE NOW</button>
 					</form>
 				</div>
+
+				<div class="clinic-footer-col">
+					<h3>CONTACT US</h3>
+					<ul>
+						<li><a href="tel:+913057082563">Phone: +91 30570 82563</a></li>
+						<li><a href="clinics.html">Tolani Clinic - Ganjmal</a></li>
+						<li><a href="clinics.html">Vijan Hospital - Canada Corner</a></li>
+						<li><a href="contact.html">Working Hours: Mon-Sat, 9 AM - 9 PM</a></li>
+					</ul>
+				</div>
 			</div>
 
 			<div class="container clinic-footer-bottom">
-				<p>Copyright &copy;2026 All rights reserved | Designed for better care journeys.</p>
+				<p>Copyright &copy;2026 All rights reserved | Medino Clinic</p>
 				<div class="clinic-social-links" aria-label="Social links">
 					<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
 					<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
@@ -254,6 +267,7 @@
 		</footer>
 	</main>
 
+	<script src="preloader.js"></script>
 	<script>
 		const siteHeader = document.querySelector(".site-header");
 		const departmentSlider = document.querySelector("#departmentSlider");

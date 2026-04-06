@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact | Medino</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWix+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkR4j8RykV5zsxgA0zYxL4x6Ck4WfE2x2QwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="subpages.css">
+	<link rel="stylesheet" href="footer.css">
+</head>
+<body class="subpage">
+	<div id="site-navbar"></div>
+
+	<main class="page-main">
+		<section class="page-banner">
+			<div class="container">
+				<h1>Contact</h1>
+				<p>Reach us for appointments, clinic timings, and treatment guidance. Our team will respond as quickly as possible.</p>
+			</div>
+		</section>
+
+		<section class="container contact-grid" aria-label="Contact information and form">
+			<div class="contact-details panel">
+				<h2 class="section-title">Contact Information</h2>
+				<ul>
+					<li>
+						<strong>Phone Number</strong>
+						<a href="tel:+913057082563">+91 30570 82563</a>
+					</li>
+					<li>
+						<strong>Clinic Address 1</strong>
+						<span>Tolani Clinic, Ganjmal, Nashik, Maharashtra</span>
+					</li>
+					<li>
+						<strong>Clinic Address 2</strong>
+						<span>Vijan Hospital, Canada Corner, College Road, Nashik</span>
+					</li>
+					<li>
+						<strong>Working Hours</strong>
+						<span>Monday to Saturday: 9:00 AM - 9:00 PM</span>
+					</li>
+				</ul>
+			</div>
+
+			<div class="form-panel panel">
+				<h2 class="section-title">Send Us a Message</h2>
+				<form class="form-grid" action="#" method="post">
+					<div class="form-group">
+						<label for="contact-name">Name</label>
+						<input id="contact-name" name="name" type="text" placeholder="Your name" required>
+					</div>
+					<div class="form-group">
+						<label for="contact-email">Email</label>
+						<input id="contact-email" name="email" type="email" placeholder="Your email" required>
+					</div>
+					<div class="form-group span-2">
+						<label for="contact-phone">Phone</label>
+						<input id="contact-phone" name="phone" type="tel" placeholder="Phone number" required>
+					</div>
+					<div class="form-group span-2">
+						<label for="contact-message">Message</label>
+						<textarea id="contact-message" name="message" placeholder="Write your message"></textarea>
+					</div>
+					<div class="form-actions span-2">
+						<button class="hero-btn" type="submit">Send Message</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<section class="full-map-wrap" aria-label="Full width map">
+			<iframe class="full-map" src="https://maps.google.com/maps?q=Nashik%20Maharashtra&t=&z=12&ie=UTF8&iwloc=&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Clinic location map"></iframe>
+		</section>
+
+		<footer class="clinic-footer" aria-label="Site footer">
+			<div class="clinic-footer-pulse" aria-hidden="true"></div>
+			<div class="container clinic-footer-top">
+				<div class="clinic-footer-col">
+					<h3>QUICK LINKS</h3>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about-doctor.html">About Doctor</a></li>
+						<li><a href="clinics.html">Clinics</a></li>
+						<li><a href="appointment.html">Appointment</a></li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="clinic-footer-col clinic-newsletter-col">
+					<h3>NEWSLETTER</h3>
+					<p>You can trust us. We only send useful health tips, updates, and appointment reminders.</p>
+					<form class="clinic-newsletter-form" action="#" method="post">
+						<input type="email" placeholder="Your email here" aria-label="Email for newsletter" required>
+						<button type="submit">SUBSCRIBE NOW</button>
+					</form>
+				</div>
+
+				<div class="clinic-footer-col">
+					<h3>CONTACT US</h3>
+					<ul>
+						<li><a href="tel:+913057082563">Phone: +91 30570 82563</a></li>
+						<li><a href="clinics.html">Tolani Clinic - Ganjmal</a></li>
+						<li><a href="clinics.html">Vijan Hospital - Canada Corner</a></li>
+						<li><a href="contact.html">Working Hours: Mon-Sat, 9 AM - 9 PM</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="container clinic-footer-bottom">
+				<p>Copyright &copy;2026 All rights reserved | Medino Clinic</p>
+				<div class="clinic-social-links" aria-label="Social links">
+					<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+					<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+					<a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
+					<a href="#" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
+				</div>
+			</div>
+		</footer>
+	</main>
+	<script src="preloader.js"></script>
+	<script src="navbar-loader.js"></script>
+</body>
+</html>
