@@ -32,12 +32,67 @@ function initNavbarAnimation() {
 
 function setActiveNavbarLink() {
 	const currentPage = window.location.pathname.split("/").pop() || "index.html";
-	const navLinks = document.querySelectorAll(".menu a");
+	const navLinks = document.querySelectorAll(".menu a, .sidebar-menu a");
 
 	navLinks.forEach((link) => {
 		const href = link.getAttribute("href");
 		if (href === currentPage) {
 			link.classList.add("active");
+		}
+	});
+}
+
+function initMobileSidebar() {
+	const header = document.querySelector(".site-header");
+	const toggleButton = document.querySelector(".nav-toggle");
+	const closeButton = document.querySelector(".sidebar-close");
+	const overlay = document.querySelector(".sidebar-overlay");
+	const sidebar = document.querySelector(".mobile-sidebar");
+	const sidebarLinks = document.querySelectorAll(".sidebar-menu a, .sidebar-cta");
+
+	if (!header || !toggleButton || !closeButton || !overlay || !sidebar) {
+		return;
+	}
+
+	const closeSidebar = () => {
+		header.classList.remove("sidebar-open");
+		document.body.classList.remove("sidebar-open");
+		toggleButton.setAttribute("aria-expanded", "false");
+		sidebar.setAttribute("aria-hidden", "true");
+	};
+
+	const openSidebar = () => {
+		header.classList.add("sidebar-open");
+		document.body.classList.add("sidebar-open");
+		toggleButton.setAttribute("aria-expanded", "true");
+		sidebar.setAttribute("aria-hidden", "false");
+	};
+
+	toggleButton.addEventListener("click", () => {
+		if (header.classList.contains("sidebar-open")) {
+			closeSidebar();
+			return;
+		}
+
+		openSidebar();
+	});
+
+	closeButton.addEventListener("click", closeSidebar);
+	overlay.addEventListener("click", closeSidebar);
+
+	document.addEventListener("keydown", (event) => {
+		if (event.key === "Escape") {
+			closeSidebar();
+		}
+	});
+
+	sidebarLinks.forEach((link) => {
+		link.addEventListener("click", closeSidebar);
+	});
+
+	window.addEventListener("resize", () => {
+		if (window.innerWidth > 991) {
+			closeSidebar();
 		}
 	});
 }
@@ -54,6 +109,7 @@ if (navbarMountNode) {
 			navbarMountNode.innerHTML = markup;
 			setActiveNavbarLink();
 			initNavbarAnimation();
+			initMobileSidebar();
 		})
 		.catch((error) => {
 			console.error(error);

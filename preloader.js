@@ -82,6 +82,60 @@
 		});
 	}
 
+	function initSiteAnimations() {
+		if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+			return;
+		}
+
+		const revealSelector = [
+			"section",
+			"article",
+			".panel",
+			".clinic-card",
+			".contact-info-card",
+			".about-education-card",
+			".about-spec-card",
+			".care-card",
+			".faq-item",
+			".appointment-panel",
+			".doctor-profile-container",
+			".welcome-card",
+			".page-banner .container",
+			".hero-content > *"
+		].join(",");
+
+		const revealElements = Array.from(document.querySelectorAll(revealSelector));
+		revealElements.forEach(function (element, index) {
+			element.classList.add("reveal-on-scroll");
+			element.style.setProperty("--reveal-delay", (index % 6) * 70 + "ms");
+		});
+
+		const immediateVisible = document.querySelectorAll(".hero, .page-banner");
+		immediateVisible.forEach(function (element) {
+			element.classList.add("reveal-on-scroll", "is-visible");
+		});
+
+		const observer = new IntersectionObserver(function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) {
+					return;
+				}
+				entry.target.classList.add("is-visible");
+				observer.unobserve(entry.target);
+			});
+		}, {
+			threshold: 0.15,
+			rootMargin: "0px 0px -8% 0px"
+		});
+
+		revealElements.forEach(function (element) {
+			if (element.classList.contains("is-visible")) {
+				return;
+			}
+			observer.observe(element);
+		});
+	}
+
 	function bootLoader() {
 		const isFirstVisit = !localStorage.getItem("clinicWelcomeSeen");
 		const isTransitionLoad = sessionStorage.getItem("clinicShowTransitionLoader") === "1";
@@ -98,6 +152,7 @@
 		}
 
 		bindPageTransitions();
+		initSiteAnimations();
 	}
 
 	if (document.readyState === "loading") {

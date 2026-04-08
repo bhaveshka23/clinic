@@ -12,45 +12,7 @@
 	<link rel="stylesheet" href="footer.css">
 </head>
 <body>
-	<header class="site-header">
-		<div class="topbar">
-			<div class="container topbar-inner">
-				<div class="topbar-left">
-					<a href="#" class="topbar-item"><i class="fa-solid fa-mobile-screen-button"></i> CALL US NOW! +91 9545592677</a>
-					<a href="#" class="topbar-item"><i class="fa-solid fa-location-dot"></i> FIND OUR LOCATION</a>
-				</div>
-				<div class="topbar-right">
-					<a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-					<a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-					<a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
-					<a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-					<a href="#" aria-label="Vimeo"><i class="fa-brands fa-vimeo-v"></i></a>
-				</div>
-			</div>
-		</div>
-
-		<nav class="navbar">
-			<div class="container navbar-inner">
-				<a href="index.html" class="brand" aria-label="Medino">
-					<img src="./images/logo.png" class="brand-logo" alt="Clinic logo">
-					<span class="brand-lines">
-						<span class="brand-text">Dr. Gulshan Tolani&#39;s</span>
-						<span class="brand-sub">Clinic</span>
-					</span>
-				</a>
-				<ul class="menu">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="about-doctor.html">ABOUT DOCTOR</a></li>
-					<li><a href="clinics.html">CLINICS</a></li>
-					<li><a href="appointment.html">APPOINTMENT</a></li>
-					<li><a href="contact.html">CONTACT</a></li>
-				</ul>
-				<a href="appointment.html" class="hero-btn">
-                    Book Appointment
-                </a>
-			</div>
-		</nav>
-	</header>
+	<div id="site-navbar"></div>
 
 	<main>
 		<section class="hero">
@@ -92,11 +54,12 @@
 				<div class="welcome-card">
 					<p class="welcome-kicker">Welcome To Tolani Clinic</p>
 					<h2>Dr. Gulshan Bheem Tolani</h2>
-					<p>
+					<p class="welcome-copy">
 						Dr. Gulshan Bheem Tolani is a verified General Physician, Internal Medicine specialist, and Diabetologist in Nashik with over 11 years of experience. He completed his MBBS from Pravara Institute of Medical Sciences (2015) and MD in General Medicine from Rural Medical College, Loni (2019)
 						 He treats a wide range of conditions including fever, cough, asthma, COPD, diabetes, hypertension, thyroid, kidney, and stomach disorders, delivering compassionate and advanced medical care in a comfortable environment. He currently practices at Tolani Clinic (Ganjmal), Vijan Hospital & Research Centre (Canada Corner), and Dr. Tolani Clinic (Baghwan Pura), making him a trusted choice for healthcare in Nashik.
 					</p>
-					<a href="about-doctor.html" class="welcome-btn">LEARN MORE</a>
+					
+					<a  class="welcome-more-toggle welcome-btn" type="button" aria-expanded="false">READ MORE</a>
 				</div>
 			</div>
 		</section>
@@ -256,64 +219,19 @@
 	</main>
 
 	<script src="preloader.js"></script>
+	<script src="navbar-loader.js"></script>
 	<script src="footer-loader.js"></script>
 	<script>
-		const siteHeader = document.querySelector(".site-header");
-		const departmentSlider = document.querySelector("#departmentSlider");
-		const departmentSliderTrack = document.querySelector(".department-slider-track");
-		let lastScrollY = window.scrollY;
-		const scrollDelta = 8;
+		const welcomeCard = document.querySelector(".welcome-card");
+		const welcomeCopy = document.querySelector(".welcome-copy");
+		const welcomeToggle = document.querySelector(".welcome-more-toggle");
 
-		window.addEventListener("scroll", () => {
-			const currentScrollY = window.scrollY;
-
-			if (currentScrollY <= 10) {
-				siteHeader.classList.remove("is-hidden", "is-scrolled");
-				lastScrollY = currentScrollY;
-				return;
-			}
-
-			siteHeader.classList.add("is-scrolled");
-
-			if (currentScrollY > lastScrollY + scrollDelta) {
-				siteHeader.classList.add("is-hidden");
-			} else if (currentScrollY < lastScrollY - scrollDelta) {
-				siteHeader.classList.remove("is-hidden");
-			}
-
-			lastScrollY = currentScrollY;
-		}, { passive: true });
-
-		if (departmentSlider && departmentSliderTrack) {
-			let sliderOffset = 0;
-			let isSliderPaused = false;
-			const sliderSpeed = 0.6;
-
-			departmentSlider.addEventListener("mouseenter", () => {
-				isSliderPaused = true;
+		if (welcomeCard && welcomeCopy && welcomeToggle) {
+			welcomeToggle.addEventListener("click", () => {
+				const isExpanded = welcomeCard.classList.toggle("is-expanded");
+				welcomeToggle.textContent = isExpanded ? "Read Less" : "Read More";
+				welcomeToggle.setAttribute("aria-expanded", String(isExpanded));
 			});
-
-			departmentSlider.addEventListener("mouseleave", () => {
-				isSliderPaused = false;
-			});
-
-			const animateSlider = () => {
-				const loopWidth = departmentSliderTrack.scrollWidth / 2;
-
-				if (!isSliderPaused) {
-					sliderOffset += sliderSpeed;
-
-					if (sliderOffset >= loopWidth) {
-						sliderOffset = 0;
-					}
-
-					departmentSliderTrack.style.transform = `translateX(-${sliderOffset}px)`;
-				}
-
-				requestAnimationFrame(animateSlider);
-			};
-
-			requestAnimationFrame(animateSlider);
 		}
 	</script>
 </body>

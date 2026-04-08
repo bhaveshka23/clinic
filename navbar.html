@@ -25,14 +25,43 @@
 					<span class="brand-sub">Clinic</span>
 				</span>
 			</a>
+			<button class="nav-toggle" type="button" aria-label="Open menu" aria-controls="mobile-sidebar" aria-expanded="false">
+				<span class="nav-toggle-lines" aria-hidden="true">
+					<span></span>
+					<span></span>
+					<span></span>
+				</span>
+			</button>
 			<ul class="menu">
 				<li><a href="index.html">HOME</a></li>
 				<li><a href="about-doctor.html">ABOUT DOCTOR</a></li>
 				<li><a href="clinics.html">CLINICS</a></li>
 				<li><a href="appointment.html">APPOINTMENT</a></li>
-				<li><a href="contact.html">CONTACT</a></li>
+				
 			</ul>
 			<a href="appointment.html" class="hero-btn">Book Appointment</a>
 		</div>
 	</nav>
+
+	<div class="sidebar-overlay" data-sidebar-overlay></div>
+	<aside id="mobile-sidebar" class="mobile-sidebar" aria-hidden="true">
+		<div class="mobile-sidebar-head">
+			<a href="index.html" class="mobile-sidebar-brand" aria-label="Medino">
+				<img src="./images/logo.png" class="mobile-sidebar-logo" alt="Tolani Clinic logo">
+				<span class="mobile-sidebar-title">Dr. Gulshan Tolani&#39;s Clinic</span>
+			</a>
+			<button class="sidebar-close" type="button" aria-label="Close menu">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
+
+		<ul class="sidebar-menu">
+			<li><a href="index.html">HOME</a></li>
+			<li><a href="about-doctor.html">ABOUT DOCTOR</a></li>
+			<li><a href="clinics.html">CLINICS</a></li>
+			<li><a href="appointment.html">APPOINTMENT</a></li>
+		</ul>
+
+		<a href="appointment.html" class="hero-btn sidebar-cta">Book Appointment</a>
+	</aside>
 </header>
