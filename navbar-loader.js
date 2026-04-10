@@ -33,10 +33,11 @@ function initNavbarAnimation() {
 function setActiveNavbarLink() {
 	const currentPage = window.location.pathname.split("/").pop() || "index.html";
 	const navLinks = document.querySelectorAll(".menu a, .sidebar-menu a");
+	const isServiceDetailPage = currentPage.startsWith("service-") || currentPage === "services.html";
 
 	navLinks.forEach((link) => {
 		const href = link.getAttribute("href");
-		if (href === currentPage) {
+		if (href === currentPage || (isServiceDetailPage && href === "services.html")) {
 			link.classList.add("active");
 		}
 	});

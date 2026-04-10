@@ -1056,3 +1056,340 @@
 		gap: 16px;
 	}
 }
+
+/* Services pages */
+.services-page-body,
+.service-page-body {
+	background: #f4f7fc;
+}
+
+.services-page-main,
+.service-page-main {
+	padding-bottom: 0;
+}
+
+.services-landing-wrap {
+	padding: 18px 0 54px;
+}
+
+.services-intro {
+	padding: 30px;
+	border-radius: 16px;
+	border: 1px solid #dce6f6;
+	background: linear-gradient(130deg, #ffffff, #f3f8ff);
+	box-shadow: 0 10px 24px rgba(17, 34, 71, 0.08);
+	margin-bottom: 24px;
+}
+
+.services-intro h2 {
+	margin: 0 0 10px;
+	font-family: "Manrope", "Poppins", sans-serif;
+	font-size: clamp(28px, 4vw, 42px);
+	font-weight: 800;
+	color: #00478d;
+	line-height: 1.1;
+}
+
+.services-intro p {
+	margin: 0;
+	max-width: 800px;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #3e4a62;
+}
+
+.services-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 20px;
+}
+
+.service-teaser-card {
+	display: grid;
+	gap: 10px;
+	padding: 22px;
+	border-radius: 14px;
+	border: 1px solid #dce6f6;
+	background: #ffffff;
+	box-shadow: 0 8px 20px rgba(17, 34, 71, 0.07);
+	transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-teaser-card:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 14px 26px rgba(17, 34, 71, 0.12);
+}
+
+.service-teaser-card h3 {
+	margin: 0;
+	font-size: 24px;
+	font-family: "Manrope", "Poppins", sans-serif;
+	line-height: 1.2;
+	color: #162a4d;
+}
+
+.service-teaser-card p {
+	margin: 0;
+	font-size: 15px;
+	line-height: 1.65;
+	color: #4e5a72;
+}
+
+.service-teaser-link {
+	font-size: 14px;
+	font-weight: 700;
+	color: #00478d;
+	letter-spacing: 0.3px;
+	text-transform: uppercase;
+}
+
+.service-content-wrap {
+	padding: 18px 0 52px;
+}
+
+.service-layout {
+	display: grid;
+	grid-template-columns: 270px minmax(0, 1fr);
+	gap: 24px;
+	align-items: start;
+}
+
+.service-sidenav {
+	position: sticky;
+	top: 120px;
+	padding: 16px;
+	border-radius: 12px;
+	border: 1px solid #dce6f6;
+	background: #f8fbff;
+	box-shadow: 0 8px 20px rgba(17, 34, 71, 0.08);
+}
+
+.service-sidenav h3 {
+	margin: 0 0 10px;
+	font-size: 16px;
+	font-weight: 800;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	color: #1e3d74;
+}
+
+.service-sidenav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 6px;
+}
+
+.service-sidenav a {
+	display: block;
+	padding: 9px 10px;
+	border-radius: 8px;
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 1.35;
+	color: #364c74;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.service-sidenav a:hover {
+	background: #e8f0ff;
+	color: #0f3270;
+}
+
+.service-sidenav a.is-active {
+	background: linear-gradient(120deg, #00478d, #176ec8);
+	color: #ffffff;
+}
+
+.service-content {
+	display: grid;
+	gap: 20px;
+}
+
+.service-hero-card {
+	position: relative;
+	min-height: 360px;
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	padding: 34px;
+	background-size: cover;
+	background-position: center;
+	box-shadow: 0 16px 28px rgba(16, 29, 56, 0.18);
+}
+
+.service-hero-card::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient(100deg, rgba(7, 19, 50, 0.86), rgba(7, 19, 50, 0.35));
+}
+
+.service-hero-copy {
+	position: relative;
+	z-index: 1;
+	max-width: 700px;
+	color: #ffffff;
+}
+
+.service-eyebrow {
+	display: inline-block;
+	margin: 0 0 10px;
+	padding: 6px 12px;
+	border-radius: 999px;
+	font-size: 11px;
+	font-weight: 700;
+	letter-spacing: 1.1px;
+	text-transform: uppercase;
+	background: rgba(229, 26, 56, 0.94);
+}
+
+.service-hero-copy h1 {
+	margin: 0;
+	font-size: clamp(30px, 4.2vw, 52px);
+	font-family: "Manrope", "Poppins", sans-serif;
+	font-weight: 800;
+	line-height: 1.08;
+}
+
+.service-hero-copy p {
+	margin: 14px 0 0;
+	font-size: 17px;
+	line-height: 1.7;
+	color: rgba(255, 255, 255, 0.92);
+}
+
+.service-panel {
+	background: #ffffff;
+	border: 1px solid #dce6f6;
+	border-radius: 16px;
+	box-shadow: 0 8px 20px rgba(17, 34, 71, 0.08);
+	padding: 26px;
+}
+
+.service-panel h2 {
+	margin: 0 0 14px;
+	font-size: 28px;
+	font-family: "Manrope", "Poppins", sans-serif;
+	line-height: 1.15;
+	color: #00478d;
+}
+
+.service-panel p {
+	margin: 0;
+	font-size: 16px;
+	line-height: 1.7;
+	color: #404b63;
+}
+
+.service-path-grid {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 14px;
+	margin-top: 14px;
+}
+
+.service-path-card {
+	padding: 18px;
+	border: 1px solid #dbe5f6;
+	border-radius: 12px;
+	background: #f8fbff;
+}
+
+.service-path-card h3 {
+	margin: 0 0 8px;
+	font-size: 18px;
+	line-height: 1.2;
+	color: #1a3158;
+}
+
+.service-path-card p {
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.service-benefits {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 12px;
+	margin-top: 14px;
+}
+
+.service-benefits li {
+	list-style: none;
+	padding: 12px;
+	border-radius: 10px;
+	background: #f2f7ff;
+	border: 1px solid #d8e4f8;
+	font-size: 14px;
+	font-weight: 600;
+	color: #27416d;
+}
+
+.service-cta {
+	padding: 30px;
+	text-align: center;
+	background: linear-gradient(130deg, #00478d, #0065be);
+	border-radius: 16px;
+	color: #ffffff;
+	box-shadow: 0 14px 28px rgba(8, 27, 66, 0.22);
+}
+
+.service-cta h2 {
+	margin: 0;
+	color: #ffffff;
+	font-size: clamp(24px, 3.5vw, 40px);
+}
+
+.service-cta p {
+	margin: 10px auto 0;
+	max-width: 760px;
+	color: #dbe8ff;
+}
+
+.service-cta a {
+	display: inline-flex;
+	margin-top: 16px;
+	padding: 12px 22px;
+	border-radius: 10px;
+	background: #ffffff;
+	color: #00478d;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.3px;
+}
+
+@media (max-width: 1080px) {
+	.service-layout {
+		grid-template-columns: 1fr;
+	}
+
+	.service-sidenav {
+		position: static;
+	}
+
+	.service-path-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 760px) {
+	.services-grid,
+	.service-benefits {
+		grid-template-columns: 1fr;
+	}
+
+	.service-hero-card {
+		min-height: 300px;
+		padding: 22px;
+	}
+
+	.service-panel,
+	.services-intro,
+	.service-cta {
+		padding: 18px;
+	}
+}
